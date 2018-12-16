@@ -1,9 +1,19 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <!--<ion-navbar>-->
+    <!--<ion-title>-->
+      <!--Ionic Blank-->
+    <!--</ion-title>-->
+  <!--</ion-navbar>-->
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button>
+        <ion-icon name="calendar"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button (click)="add()">
+        <ion-icon name="add"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
@@ -11,4 +21,5 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+  <ion-calendar></ion-calendar>
 </ion-content>
