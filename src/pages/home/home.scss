@@ -1,3 +1,11 @@
 page-home {
-
+  ion-calendar.green .title{
+    background-color: green;
+  }
+  ion-calendar.red .title{
+    background-color: red;
+  }
+  ion-calendar.blue .title{
+    background-color: blue;
+  }
 }
