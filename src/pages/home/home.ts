@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ModalController } from 'ionic-angular';
-import { CalendarModalOptions, CalendarModal, CalendarComponentOptions} from "ion2-calendar";
+import { NavController, AlertController } from 'ionic-angular';
+// import { CalendarModalOptions, CalendarModal, CalendarComponentOptions} from "ion2-calendar";
+import { CalendarComponentOptions} from "ion2-calendar";
 
 @Component({
   selector: 'page-home',
@@ -15,32 +16,19 @@ export class HomePage {
     monthPickerFormat : ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic']
   }
 
+  segmentBot : String;
+
+  listas : any;
+  notas : any;
+  contactos : any;
+
   constructor(public navCtrl: NavController,
-              public alert: AlertController,
-              public modalCtrl: ModalController) {
+              public alert: AlertController) {
     //this.openCalendar()
-  }
-
-  add(){
-
-    let choice = this.alert.create({
-      title : 'Añadir',
-      //inputs: [],
-      buttons: [{ text: 'Cancel', role: 'cancel'
-      },{
-        text: 'Acept',
-        handler: data=>{
-          console.log(data);
-        }
-      }]
-    });
-
-    choice.addInput({type: 'radio', label: 'Lista', value: 'list'});
-    choice.addInput({type: 'radio', label: 'Notas', value: 'notes'});
-    choice.addInput({type: 'radio', label: 'Contacto', value: 'contact'});
-
-    choice.present();
+    this.segmentBot = 'calendar';
+    this.listas = [];
+    this.notas = [];
+    this.contactos = [];
 
   }
-
 }
